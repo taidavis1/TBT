@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FloatBtn } from "@/components/FloatBtn";
 import Head from "next/head";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 
 const fontTitle = Orbitron({
@@ -29,9 +29,11 @@ const fontContent = Inter({
 
 export const metadata = {
 	title: "TBT Machining | Precision 5-Axis CNC Machining in Fremont, CA",
-	description: "TBT Machining specializes in precision 5-axis CNC machining, rapid prototyping, CNC milling, and tight-tolerance inspection in Fremont, CA. We support engineers, startups, and manufacturers across Silicon Valley and the Bay Area with high-precision components for aerospace, robotics, semiconductor, EV, and medical applications.",
+	description: "TBT Machining specializes in precision 5-axis CNC machining, rapid prototyping, CNC milling, 3D printing, and tight-tolerance inspection in Fremont, CA. We support engineers, startups, and manufacturers across Silicon Valley and the Bay Area with high-precision components for aerospace, robotics, semiconductor, EV, and medical applications.",
 	keywords: [
 		"5-axis CNC machining Fremont",
+		"5-axis CNC machining near me",
+		"CNC machining near me",
 		"CNC machining Fremont CA",
 		"precision CNC machining Bay Area",
 		"rapid prototyping Fremont",
@@ -43,6 +45,17 @@ export const metadata = {
 		"semiconductor machining Fremont",
 		"EV machining Silicon Valley",
 		"CNC machine shop Fremont",
+		"3D printing Fremont",
+		"3D printing Fremont CA",
+		"3D printing Bay Area",
+		"rapid 3D printing Fremont",
+		"engineering 3D printing services",
+		"prototype 3D printing Bay Area",
+		"3D printing for prototyping",
+		"industrial 3D printing Silicon Valley",
+		"fast prototype 3D printing",
+		"3D printing for engineers",
+		"3D printing services Fremont",
 		"TBT Machining"
 	],
 	robots: {
@@ -65,7 +78,7 @@ export const metadata = {
 	formatDetection: { telephone: true, email: true, address: true },
 	openGraph: {
 		title: "TBT Machining | Precision 5-Axis CNC Machining in Fremont, CA",
-		description: "TBT Machining provides advanced 5-axis CNC machining, rapid prototyping, CNC milling, and tight-tolerance inspection in Fremont, CA. We serve aerospace, robotics, semiconductor, EV, and medical teams across Silicon Valley and the Bay Area.",
+		description: "TBT Machining provides advanced 5-axis CNC machining, rapid prototyping, CNC milling, 3D printing, and tight-tolerance inspection in Fremont, CA. We serve aerospace, robotics, semiconductor, EV, and medical teams across Silicon Valley and the Bay Area.",
 		images: [
 			{
 				url: `${process.env.NEXT_PUBLIC_REAL_URL}/Carousel/1.png`,
@@ -82,7 +95,7 @@ export const metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "TBT Machining | Precision 5-Axis CNC Machining in Fremont, CA",
-		description: "TBT Machining delivers precision 5-axis CNC machining, CNC milling, rapid prototyping, and inspection services for engineers across Fremont, Silicon Valley, and the Bay Area.",
+		description: "TBT Machining delivers precision 5-axis CNC machining, CNC milling, rapid prototyping, 3D printing, and inspection services for engineers across Fremont, Silicon Valley, and the Bay Area.",
 		images: [
 			{
 				url: `${process.env.NEXT_PUBLIC_REAL_URL}/Carousel/1.png`,
@@ -207,6 +220,16 @@ const JsonLD = {
 				"areaServed": "Fremont, Silicon Valley, Bay Area",
 				"description": "Tight-tolerance inspection with dimensional verification and quality documentation for high-precision CNC components."
 			}
+		},
+		{
+			"@type": "Offer",
+			"itemOffered": {
+				"@type": "Service",
+				"name": "3D Printing",
+				"serviceType": "3D printing",
+				"areaServed": "Fremont, Silicon Valley, Bay Area",
+				"description": "Professional 3D printing services in Fremont, CA for rapid prototyping and early-stage product development. We support engineers and startups across Silicon Valley and the Bay Area with fast-turn 3D printed parts for design validation, form-and-fit testing, and functional prototype iterations before CNC machining."
+			}
 		}
 	]
 };
@@ -233,6 +256,7 @@ export default function RootLayout({ children }) {
 				</StoreProvider>
 			</body>
 			<GoogleAnalytics gaId="G-6SZZ5EXWC0" />
+			<GoogleTagManager gtmId="GTM-K4VZ4Q4T" />
 		</html>
 	);
 }

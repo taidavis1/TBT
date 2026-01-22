@@ -62,9 +62,11 @@ export default function Footer() {
                                 Services
                             </h2>
                             {ServicesData.map((service) => (
-                                <Link key={service?.name} href={"/#services"} className=' hover:underline lg:text-lg text-sm text-white mb-2 lg:mb-4'>
-                                    {service?.name}
-                                </Link>
+                                service?.name === "3D Scanning"?
+                                    null:
+                                    <Link key={service?.name} href={"/#services"} className=' hover:underline lg:text-lg text-sm text-white mb-2 lg:mb-4'>
+                                        {service?.name === "3D Printing" ? "3D Printing/Scanning" : service?.name}
+                                    </Link>
                             ))}
                         </div>
                         <div id='open-hours' className=''>

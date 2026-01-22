@@ -47,7 +47,7 @@ export const Navbar = () => {
         },
         {
             name: "About",
-            link: "/about",
+            link: "/about/",
         },
         {
             name: "Services",
@@ -55,11 +55,11 @@ export const Navbar = () => {
         },
         {
             name: "Equipment",
-            link: "/equipment",
+            link: "/equipment/",
         },
         {
             name: "Resources",
-            link: "/resources",
+            link: "/resources/",
         },
     ];
 

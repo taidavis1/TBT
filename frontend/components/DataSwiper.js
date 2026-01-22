@@ -159,9 +159,9 @@ export const SwiperData = ({data, name, mode}) => {
                     >
                         {data.map((item, index) => (
                             <SwiperSlide key={index} className={`ease-in-out transition-all duration-500 group cursor-pointer aspect-square rounded-2xl`}>
-                                <Item width={mode === "equipment" ? 600 : 400} height={mode === "equipment" ? 600 : 400} original={mode === "equipment" ? item?.img : item} alt={`Our Works ${index}`}>
+                                <Item width={mode === "equipment" ? 600 : 400} height={mode === "equipment" ? 600 : 400} original={mode === "equipment" ? item : item} alt={`Our Works ${index}`}>
                                     {({ ref, open }) => (
-                                        <Image fill onClick={open} ref={ref} src={mode === "equipment" ? item?.img : item} alt={`${mode === "equipment"? `Our Works ${index + 1}` : "Our Clients's Company Logo"}`} className= {`rounded-2xl w-full  h-full ${mode === "equipment" ? "object-cover p-[4px]" : "lg:p-8"} ${mode !== "equipment" &&  index === 3 && "brightness-50"} hover:opacity-55 transition ease-in-out duration-500`} />											
+                                        <Image fill onClick={open} ref={ref} src={mode === "equipment" ? item : item} alt={`${mode === "equipment"? `Our Equipment ${index + 1}` : "Our Clients's Company Logo"}`} className= {`rounded-2xl w-full  h-full ${mode === "equipment" ? "object-cover p-[4px]" : "lg:p-8"} ${mode !== "equipment" &&  index === 3 && "brightness-50"} hover:opacity-55 transition ease-in-out duration-500`} />											
                                     )}
                                 </Item>
                                 {mode === "equipment" && 
@@ -170,6 +170,8 @@ export const SwiperData = ({data, name, mode}) => {
                                         {index === 1 && <h1 className=' text-body-second lg:text-2xl font-bold '>YCM NXV 1020A</h1>}
                                         {index === 2 && <h1 className=' text-body-second lg:text-2xl font-bold '>Hass UMC-750</h1>}
                                         {index === 3 && <h1 className=' text-body-second lg:text-2xl font-bold '>Zeiss Spectrum</h1>}
+                                        {index === 4 && <h1 className=' text-body-second lg:text-2xl font-bold '>Bambu P2S</h1>}
+                                        {index === 5 && <h1 className=' text-body-second lg:text-2xl font-bold '>Einstar Vega 3D Scanner</h1>}
                                     </div>
                                 }
                             </SwiperSlide>

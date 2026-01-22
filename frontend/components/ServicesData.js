@@ -2,6 +2,8 @@ import Services1 from "@/public/servicesImg/2.png";
 import Services2 from "@/public/servicesImg/3.png";
 import Services3 from "@/public/servicesImg/4.png";
 import Services4 from "@/public/servicesImg/5.png";
+import Services5 from "@/public/servicesImg/6.png";
+import Services6 from "@/public/servicesImg/7.png";
 
 const servicesData = [
     {
@@ -18,6 +20,16 @@ const servicesData = [
         name: "CNC Milling",
         img: Services3,
         desc: "We provide high-precision CNC milling for flat, contoured, and complex metal components. Our Fremont-based machine shop supports Bay Area engineers with reliable milling solutions for prototypes, fixtures, brackets, housings, and custom metal parts with consistent accuracy.",
+    },
+    {
+        name: "3D Printing",
+        img: Services5,
+        desc: "We offer fast-turn 3D printing in Fremont, CA to help Bay Area engineering teams validate form, fit, and early-function prototypes before machining. Ideal for rapid iteration, design reviews, and low-volume prototype needs, our 3D printing service supports Silicon Valley startups and manufacturers with quick lead times and consistent, engineering-ready results.",
+    },
+    {
+        name: "3D Scanning",
+        img: Services6,
+        desc: "Our 3D scanning services in Fremont, CA capture accurate digital models of existing parts for reverse engineering, inspection, and design refinement. Supporting engineers across Silicon Valley and the Bay Area, we help convert physical components into precise CAD data for prototyping, iteration, and CNC manufacturing workflows.",
     },
     {
         name: "Quality Control & Inspection",

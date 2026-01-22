@@ -16,10 +16,6 @@ import EVIcon from "@/public/industry-icon/3.png";
 import SemiconductorIcon from "@/public/industry-icon/4.png";
 import MedicalIcon from "@/public/industry-icon/5.png";
 
-import Equip1 from "@/public/equipmentImg/1.png";
-import Equip2 from "@/public/equipmentImg/2.png";
-import Equip3 from "@/public/equipmentImg/3.png";
-import Equip4 from "@/public/equipmentImg/4.png";
 
 import resourcesImg from "@/public/servicesImg/3.png";
 
@@ -37,6 +33,7 @@ import faqData from "@/components/FaqData";
 import HomeIcon1 from "@/public/Icon/homeIcon/10.png";
 import HomeIcon2 from "@/public/Icon/homeIcon/11.png";
 import HomeIcon3 from "@/public/Icon/homeIcon/12.png";
+import { SwiperServices } from "@/components/SwiperServices";
 
 export default function Home() {
 
@@ -69,24 +66,11 @@ export default function Home() {
         return `/gallery/${index + 1}.png`
 	});
 
-	const equipmentData = [
-		{
-			name: "",
-			img: Equip1
-		},
-		{
-			name: "",
-			img: Equip2
-		},
-		{
-			name: "",
-			img: Equip3
-		},
-		{
-			name: "",
-			img: Equip4
-		}
-	];
+	const equipmentData = Array.from({
+		length: 6,
+	}, (_, index) => {
+        return `/equipmentImg/${index + 1}.png`
+	});
 
 	const whySectionData = [
 		{
@@ -155,7 +139,7 @@ export default function Home() {
 				>
 					<Image className=" absolute -bottom-20 lg:top-0 w-32 lg:w-max -right-4 z-50 lg:left-4" alt="Home Icon Capabilities" src={HomeIcon1} />
 					<div className=" mx-auto max-w-screen-xl">
-						<div className=" items-center grid lg:grid-cols-2 gap-8 lg:gap-12">
+						<div className=" grid lg:grid-cols-2 items-center gap-8 lg:gap-12">
 							<div className=" space-y-6 lg:space-y-8">
 								<div className=" space-y-2">
 									<div className=" flex justify-between items-center">
@@ -177,19 +161,8 @@ export default function Home() {
 									</p>
 								</div>
 							</div>
-							<div className=" grid grid-cols-2 gap-4">
-								{servicesData.map((item, index) => (
-									<div key={index} className=" rounded-2xl group cursor-pointer relative">
-										<Image src={item?.img} alt={item?.name} className=" group-hover:brightness-100 transition ease-in-out duration-400 brightness-80 rounded-2xl w-full h-full" />
-										<div className="absolute lg:group-hover:translate-y-24 transition-all duration-500 ease-in-out group-hover:opacity-0 img-test2 rounded-2xl w-full h-full top-0">
-											<div className=" h-full translate-y-4 flex items-center justify-center text-center">
-												<h2 className=" text-white font-headerFont text-sm lg:text-2xl">
-													{item?.name}
-												</h2>
-											</div>
-										</div>
-									</div>
-								))}
+							<div className=" mx-auto w-full max-w-[370px] sm:max-w-md md:max-w-xl h-[400px] lg:h-[600px]">
+								<SwiperServices data={servicesData} />
 							</div>
 						</div>
 					</div>
