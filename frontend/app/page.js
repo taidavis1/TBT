@@ -88,7 +88,7 @@ export default function Home() {
 	];
 
 	const clientData = Array.from({
-		length: 4,
+		length: 6,
 	}, (_, index) => {
         return `/companyServe/${index + 1}.png`
 	});
